@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
 <title>Bhalla</title>
+  <script>
+    const $body = document.querySelector('body');
+    let scrollPosition = 0;
+
+    export default {
+      enable() {
+        scrollPosition = window.pageYOffset;
+        $body.style.overflow = 'hidden';
+        $body.style.position = 'fixed';
+        $body.style.top = `-${scrollPosition}px`;
+        $body.style.width = '100%';
+      },
+      disable() {
+        $body.style.removeProperty('overflow');
+        $body.style.removeProperty('position');
+        $body.style.removeProperty('top');
+        $body.style.removeProperty('width');
+        window.scrollTo(0, scrollPosition);
+      }
+    };
+  </script>
   <style>
     html {
-      background: rgb(255,255,255);
-      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(234,199,247,1) 14%, rgba(220,162,250,1) 35%, rgba(121,207,255,1) 71%, rgba(187,238,255,1) 90%, rgba(255,255,255,1) 100%);
+      /*background: rgb(255,255,255);
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(234,199,247,1) 14%, rgba(220,162,250,1) 35%, rgba(121,207,255,1) 71%, rgba(187,238,255,1) 90%, rgba(255,255,255,1) 100%);*/
     }
     
     html, body {
@@ -35,6 +56,6 @@
     }
   </style>
 <body>
-  <h1 class="center" style="font-size:88px; font-family:PoppinsRegular;Helvetica,sans-serif; color:#ffffff;">bhalla.org</h1>
+  <h1 class="center" style="font-size:88px; font-family:PoppinsRegular;Helvetica,sans-serif; color:#000000;">bhalla.org</h1>
 </body>
 </html>
