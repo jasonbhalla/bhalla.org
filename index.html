@@ -1,27 +1,6 @@
 <!DOCTYPE html>
 <html>
 <title>Bhalla</title>
-  <script>
-    const $body = document.querySelector('body');
-    let scrollPosition = 0;
-
-    export default {
-      enable() {
-        scrollPosition = window.pageYOffset;
-        $body.style.overflow = 'hidden';
-        $body.style.position = 'fixed';
-        $body.style.top = `-${scrollPosition}px`;
-        $body.style.width = '100%';
-      },
-      disable() {
-        $body.style.removeProperty('overflow');
-        $body.style.removeProperty('position');
-        $body.style.removeProperty('top');
-        $body.style.removeProperty('width');
-        window.scrollTo(0, scrollPosition);
-      }
-    };
-  </script>
   <style>
     html {
       /*background: rgb(255,255,255);
@@ -54,8 +33,15 @@
       font-family: PoppinsRegular;
       src: url(Poppins-Regular.ttf);
     }
+    
+    h1 {
+      font-size: 72px;
+      background: -webkit-linear-gradient(#eee, #333);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   </style>
 <body>
-  <h1 class="center" style="font-size: 88px; background: -webkit-linear-gradient(#780206, #061161); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family:PoppinsRegular,UbuntuMedium,Helvetica,sans-serif;">bhalla.org</h1>
+  <h1 class="center" >bhalla.org</h1>
 </body>
 </html>
