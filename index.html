@@ -34,14 +34,19 @@
       src: url(Poppins-Regular.ttf);
     }
     
-    h1 {
-      font-size: 72px;
-      background: -webkit-linear-gradient(#eee, #333);
+    .gradient-text {
+      background-color: #f3ec78;
+      background-image: linear-gradient(45deg, #f3ec78, #af4261);
+      background-size: 100%;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-text-fill-color: transparent;
+      }
   </style>
 <body>
-  <h1 class="center" >bhalla.org</h1>
+  <h1 class="center" style="background-color: black; font-size: 88px; font-family:PoppinsRegular,UbuntuMedium,Helvetica,sans-serif;">
+  <span class="gradient-text">bhalla.org</span>
+  </h1>
 </body>
 </html>
