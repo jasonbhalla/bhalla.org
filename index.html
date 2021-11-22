@@ -2,41 +2,35 @@
 <html>
   <title>Bhalla</title>
   <style>
-    html { height: 100%; }
-
-    body { 
-      background: #333; 
-      text-align: center;
-      min-height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    html {
+      background: #1d1f20;
+      margin:  0 4rem;
     }
-
-    h1 { font-size: 20vw; }
-
-    .linear-wipe {
+    .header {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 6rem;
+      font-weight:  100;
+      letter-spacing: 2px;
       text-align: center;
-
-      background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
-      background-size: 200% auto;
-
-      color: #000;
-      background-clip: text;
-      text-fill-color: transparent;
+      color: #f35626;
+      background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      -webkit-animation: hue 10s infinite linear;
+    }
 
-      animation: shine 1s linear infinite;
-      @keyframes shine {
-        to {
-          background-position: 200% center;
-        }
+    @-webkit-keyframes hue {
+      from {
+        -webkit-filter: hue-rotate(0deg);
+      }
+      to {
+        -webkit-filter: hue-rotate(-360deg);
       }
     }
+
   </style>
   
   <body>
-    <h1 class="linear-wipe">Shine!</h1>
+    <h1 class="header">Pure CSS Gradient Text Animation Effect</h1>
   </body>
 </html>
