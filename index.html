@@ -25,7 +25,13 @@
     }
     
     h1 {
-      font-size: 20vw;
+      animation: flow 30s ease-in-out infinite;
+      background: linear-gradient(-60deg, #904e95, #904e95, #e73c7e, #ee7752);
+      background-size: 300%;
+      
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     
     .center {
@@ -76,10 +82,11 @@
       }
     }
     
+    
   </style>
 <body>
   <h1 class="center" style="background-color: black; font-size: 88px; font-family:PoppinsRegular,UbuntuMedium,Helvetica,sans-serif;">
-  <span class="linear-wipe">bhalla.org</span>
+  <span>bhalla.org</span>
   </h1>
 </body>
 </html>
