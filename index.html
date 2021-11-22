@@ -2,21 +2,58 @@
 <html>
   <title>Bhalla</title>
   <style>
+    
     html {
-      background: #1d1f20;
+      background: #000000;
       margin:  0 4rem;
     }
+    
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: black;
+      background: #000000;
+    }
+    
+    body {
+      position: relative;
+      background: #000;
+      text-align: center;
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
     .header {
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 6rem;
+      font-family: PoppinsRegular, UbuntuMedium, Helvetica, Arial, sans-serif;
+      font-size: 88px;
       font-weight:  100;
       letter-spacing: 2px;
       text-align: center;
       color: #f35626;
-      background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+      background-image: -webkit-linear-gradient(90deg, rgba(255,74,74,1) 0%, rgba(253,133,79,1) 14.28%, rgba(255,251,81,1) 28.57%, rgba(158,248,131,1) 42.85%, rgba(76,255,243,1) 57.14%, rgba(96,101,255,1) 71.42%, rgba(182,82,255,1) 85.71%, rgba(232,119,255,1) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       -webkit-animation: hue 10s infinite linear;
+    }
+    
+    .center {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    @font-face {
+      font-family: UbuntuMedium;
+      src: url(Ubuntu-Medium.ttf);
+    }
+    
+    @font-face {
+      font-family: PoppinsRegular;
+      src: url(Poppins-Regular.ttf);
     }
 
     @-webkit-keyframes hue {
@@ -31,6 +68,6 @@
   </style>
   
   <body>
-    <h1 class="header">Pure CSS Gradient Text Animation Effect</h1>
+    <h1 class="header" class="center">Pure CSS Gradient Text Animation Effect</h1>
   </body>
 </html>
